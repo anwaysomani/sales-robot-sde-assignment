@@ -12,16 +12,49 @@
     <div class="h3 m-t-8 f-w-500">LinkedIn Connect</div>
     <hr class="m-t-12 m-b-12">
 
-    <div id="when_not_connecting">
-        <button id="start_connecting" class="btn btn-block btn-success m-t-12">Auto-connect this page</button>
+    <div id="when_not_connecting" class="m-b-12">
+        <button id="start_connecting" class="btn btn-block btn-success m-t-12">Auto-connect people on this page</button>
     </div>
 
-    <div class="m-t-12" id="when_connecting">
-        <div class="col-xs-8 p-l-6 m-t-12">
-            <p>Total Applied</p>
+    <div id="when_connecting" class="m-b-12" style="display: none;">
+        <!-- applied contacts -->
+        <div class="m-t-12">
+            <div class="col-xs-6 p-l-6 m-t-12">
+                <p>Total Applied</p>
+            </div>
+            <div class="col-xs-6 p-l-6 text-right m-t-12">
+                <p><span id="appliedConnects"></span> / 10 contacts</p>
+            </div>
         </div>
-        <div class="col-xs-4 p-l-6 text-right m-t-12 m-b-12">
-            <p><span id="appliedConnects"></span> / 10 contacts</p>
+
+        <!-- already connected contacts -->
+        <div class="m-t-12">
+            <div class="col-xs-6 p-l-6 m-t-12">
+                <p>Existing Connects</p>
+            </div>
+            <div class="col-xs-6 p-l-6 text-right m-t-12">
+                <p><span id="existingConnects"></span> / 10 contacts</p>
+            </div>
+        </div>
+
+        <!-- professional accounts -->
+        <div class="m-t-12">
+            <div class="col-xs-6 p-l-6 m-t-12">
+                <p>Prof. Accounts</p>
+            </div>
+            <div class="col-xs-6 p-l-6 text-right m-t-12">
+                <p><span id="professionalContacts"></span> / 10 contacts</p>
+            </div>
+        </div>
+
+        <!-- no actions -->
+        <div class="m-t-12">
+            <div class="col-xs-6 p-l-6 m-t-12">
+                <p>No Actions</p>
+            </div>
+            <div class="col-xs-6 p-l-6 text-right m-t-12">
+                <p><span id="noActions"></span> / 10 contacts</p>
+            </div>
         </div>
     </div>
 

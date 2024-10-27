@@ -7,8 +7,8 @@ function transmit(connected_contacts, already_connected_contacts, follow_contact
         type: "SCRAPED_DATA",
         data: {
             totalApplied: connected_contacts,
-            totalConnected: already_connected_contacts,
-            totalFollowed: follow_contacts,
+            totalExistingConnects: already_connected_contacts,
+            totalProfessionalConnects: follow_contacts,
         }
     });
 }
@@ -19,12 +19,10 @@ async function scrapeData() {
     let follow_contacts = 0;
 
     const actionButtons = document.querySelectorAll('.artdeco-button.artdeco-button--2.artdeco-button--secondary.ember-view');
-    // message, connect, follow
 
     for (const element of actionButtons) {
-        console.log(element.textContent.trim());
-        const d_text = element.textContent.trim()
-        if (dText === 'Connect') {
+        const d_text = element.textContent.trim();
+        if (d_text === 'Connect') {
             await sleep(1000);
             element.click();
             await sleep(1000);
@@ -35,8 +33,12 @@ async function scrapeData() {
                 connected_contacts += 1;
                 transmit(connected_contacts, already_connected_contacts, follow_contacts);
             }
-        } else if (dText === 'Message') {
-
+        } else if (d_text === 'Message') {
+            already_connected_contacts += 1;
+            transmit(connected_contacts, already_connected_contacts, follow_contacts);
+        } else if (d_text === 'Follow') {
+            follow_contacts += 1;
+            transmit(connected_contacts, already_connected_contacts, follow_contacts);
         }
     }
 }
