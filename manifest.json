@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "LI Auto Connect",
+    "version": "0.1",
+    "description": "LinkedIn Bot - Sends auto connect request for first page of the `People` search result",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "app/index.html",
+        "default_icon": {
+            "16": "assets/icon/icon-16.png",
+            "48": "assets/icon/icon-48.png",
+            "128": "assets/icon/icon-128.png"
+        }
+    },
+    "background": {
+        "service_worker": "app/js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.linkedin.com/*"
+            ],
+            "js": [
+                "app/js/content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "assets/icon/icon-16.png",
+        "48": "assets/icon/icon-48.png",
+        "128": "assets/icon/icon-128.png"
+    }
+}

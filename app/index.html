@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LI Auto Connect</title>
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="w-352 p-8 bg-primary">
+    <div class="h3 m-t-8 f-w-500">LinkedIn Connect</div>
+    <hr class="m-t-12 m-b-12">
+
+    <div id="when_not_connecting">
+        <button id="start_connecting" class="btn btn-block btn-success m-t-12">Auto-connect this page</button>
+    </div>
+
+    <div class="m-t-12" id="when_connecting">
+        <div class="col-xs-8 p-l-6 m-t-12">
+            <p>Total Applied</p>
+        </div>
+        <div class="col-xs-4 p-l-6 text-right m-t-12 m-b-12">
+            <p><span id="appliedConnects"></span> / 10 contacts</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
