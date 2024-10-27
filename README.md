@@ -7,6 +7,10 @@ LinkedIn Auto Connect is a Chrome extension designed to automatically send conne
 - Differentiates between already connected, professional accounts, and new contacts.
 - Provides a summary report of connection attempts and status.
 
+### Demo Video
+You can watch the video tutorial [here](https://github.com/anwaysomani/sales-robot-sde-assignment/tree/master/assets/demo/sr_assignment_demo.mp4).
+
+
 ## Prerequisites
 To use this extension, you need to have the following:
 - Google Chrome (version 88 or above is recommended).
@@ -20,7 +24,7 @@ Follow these steps to run the LinkedIn Auto Connect extension in Google Chrome:
 
 ```sh
 # Clone the repository using Git
-$ git clone https://github.com/yourusername/linkedin-auto-connect.git
+$ git clone https://github.com/anwaysomani/sales-robot-sde-assignment.git
 
 # Navigate into the extension folder
 $ cd linkedin-auto-connect
